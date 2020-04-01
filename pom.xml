@@ -10,8 +10,8 @@
     <!-- lookup parent from repository --> 
   </parent>  
   <groupId>com.cenfotec</groupId>  
-  <artifactId>taskly</artifactId>  
-  <version>0.0.1-SNAPSHOT</version>  
+  <artifactId>taskly</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>  
   <name>taskly</name>  
   <description>Proyecto Final - BISOFT-15</description>  
@@ -49,7 +49,8 @@
       <version>2.2.3</version> 
     </dependency> 
   </dependencies>  
-  <build> 
+  <build>
+    <finalName>taskly</finalName>
     <plugins> 
       <plugin> 
         <groupId>org.springframework.boot</groupId>  

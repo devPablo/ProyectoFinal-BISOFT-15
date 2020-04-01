@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - bisoft15
+name: Build and deploy WAR app to Azure Web App - bisoft15
 
 on:
   push:
@@ -29,4 +29,4 @@ jobs:
         app-name: 'bisoft15'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_c48653f6bdf34683a75717f7649c1875 }}
-        package: '${{ github.workspace }}/target/*.jar'
+        package: '${{ github.workspace }}/target/*.war'

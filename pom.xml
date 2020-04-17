@@ -47,7 +47,17 @@
       <groupId>com.microsoft.azure</groupId>  
       <artifactId>azure-cosmosdb-spring-boot-starter</artifactId>  
       <version>2.2.3</version> 
-    </dependency> 
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-aws</artifactId>
+      <version>LATEST</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-aws-messaging</artifactId>
+      <version>LATEST</version>
+    </dependency>
   </dependencies>  
   <build>
     <finalName>taskly</finalName>

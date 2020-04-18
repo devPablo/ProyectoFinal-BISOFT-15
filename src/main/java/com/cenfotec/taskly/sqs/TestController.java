@@ -21,7 +21,7 @@ public class TestController {
     @Autowired
     private QueueMessagingTemplate queueMessagingTemplate;
 
-    @Value("${cloud.aws.end-point.uri}")
+    @Value("${cloud.aws.end-point.uri.users}")
     private String sqsEndPoint;
 
     @GetMapping

@@ -9,16 +9,16 @@ import java.time.LocalDateTime;
 @Document(collection = "Tasks")
 public class Task {
     @Id
-    private float Id;
+    private String Id;
     @PartitionKey
-    private float userId;
+    private String userId;
     private String name;
     private String description;
     private boolean complete;
     private LocalDateTime dueDate;
     private LocalDateTime createdDate;
 
-    public Task(float userId, String name, String description, boolean complete, LocalDateTime dueDate) {
+    public Task(String userId, String name, String description, boolean complete, LocalDateTime dueDate) {
         this.userId = userId;
         this.name = name;
         this.description = description;
@@ -27,19 +27,19 @@ public class Task {
         this.createdDate = LocalDateTime.now();
     }
 
-    public float getId() {
+    public String getId() {
         return Id;
     }
 
-    public void setId(float id) {
+    public void setId(String id) {
         Id = id;
     }
 
-    public float getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(float userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

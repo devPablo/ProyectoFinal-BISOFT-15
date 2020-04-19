@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Document(collection = "Tasks")
 public class Task {
     @Id
-    private String Id;
     @PartitionKey
     private String userId;
     private String name;
@@ -18,21 +17,13 @@ public class Task {
     private LocalDateTime dueDate;
     private LocalDateTime createdDate;
 
-    public Task(String userId, String name, String description, boolean complete, LocalDateTime dueDate) {
+    public Task(String userId, String name, String description, LocalDateTime dueDate) {
         this.userId = userId;
         this.name = name;
         this.description = description;
         this.complete = false;
         this.dueDate = dueDate;
         this.createdDate = LocalDateTime.now();
-    }
-
-    public String getId() {
-        return Id;
-    }
-
-    public void setId(String id) {
-        Id = id;
     }
 
     public String getUserId() {
@@ -86,8 +77,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "Id=" + Id +
-                ", userId=" + userId +
+                "userId='" + userId + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", complete=" + complete +

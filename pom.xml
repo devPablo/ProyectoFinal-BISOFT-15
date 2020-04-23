@@ -77,10 +77,10 @@
         <version>1.9.0</version>
         <configuration>
           <schemaVersion>V2</schemaVersion>
-          <resourceGroup>taskly-rg</resourceGroup>
+          <resourceGroup>BISOFT-15</resourceGroup>
           <appName>taskly</appName>
-          <pricingTier>B3</pricingTier>
-          <region>eastus</region>
+          <pricingTier>F1</pricingTier>
+          <region>centralus</region>
           <runtime>
             <os>linux</os>
             <javaVersion>jre8</javaVersion>

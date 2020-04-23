@@ -35,5 +35,5 @@ jobs:
       with:
         app-name: 'bisoft15'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c48653f6bdf34683a75717f7649c1875 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ac8b6b9d482541d38242847a0199ffbd }}
         package: '${{ github.workspace }}/target/*.war'

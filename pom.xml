@@ -55,7 +55,7 @@
     </dependency>
   </dependencies>  
   <build>
-    <finalName>taskly</finalName>
+    <finalName>ROOT</finalName>
     <plugins> 
       <plugin> 
         <groupId>org.springframework.boot</groupId>  

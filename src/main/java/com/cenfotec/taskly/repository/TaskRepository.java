@@ -9,5 +9,7 @@ public interface TaskRepository extends CosmosRepository<Task, String> {
 
     List<Task> findAllByUserId(String userId);
 
+    List<Task> findByUuid(String uuid);
+
     void deleteTaskByUuid(String uuid);
 }

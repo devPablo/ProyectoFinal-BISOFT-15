@@ -27,14 +27,21 @@ public class TaskController {
 
     @PostMapping("/api/task")
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
-        taskService.registerTask(task);
-        return new ResponseEntity<>(task, HttpStatus.CREATED);
+        Task newTask = new Task(task.getUserId(), task.getName(), task.getDescription(), task.getDueDate());
+        taskService.registerTask(newTask);
+        return new ResponseEntity<>(newTask, HttpStatus.CREATED);
     }
 
     @RequestMapping(path="/api/task/{userId}", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Task>> getTasksByUserID(@PathVariable("userId") String userId) {
         List<Task> taskList = taskService.findAllByUserId(userId);
         return new ResponseEntity<>(taskList, HttpStatus.OK);
+    }
+
+    @PutMapping(path="/api/task/{uuid}")
+    public ResponseEntity<Task> updateTaskByUUID(@PathVariable("uuid") String uuid, @RequestBody Task task) {
+        Task updatedEspecie = taskService.updateByUuid(uuid, task);
+        return new ResponseEntity<>(updatedEspecie, HttpStatus.OK);
     }
 
     @DeleteMapping(path="/api/task/{uuid}")

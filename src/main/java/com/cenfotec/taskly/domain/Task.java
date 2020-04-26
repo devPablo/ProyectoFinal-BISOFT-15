@@ -19,6 +19,8 @@ public class Task {
     private LocalDateTime dueDate;
     private LocalDateTime createdDate;
 
+    public Task() {}
+
     public Task(String userId, String name, String description, LocalDateTime dueDate) {
         this.uuid = UUID.randomUUID().toString();
         this.userId = userId;
@@ -27,6 +29,13 @@ public class Task {
         this.complete = false;
         this.dueDate = dueDate;
         this.createdDate = LocalDateTime.now();
+    }
+
+    public Task(String name, String description, boolean complete, LocalDateTime dueDate) {
+        this.name = name;
+        this.description = description;
+        this.complete = complete;
+        this.dueDate = dueDate;
     }
 
     public String getUuid() {

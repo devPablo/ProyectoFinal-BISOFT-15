@@ -8,4 +8,6 @@ public interface TaskService {
     void registerTask(Task task);
 
     List<Task> findAllByUserId(String userId);
+
+    void deleteByUuid(String uuid);
 }

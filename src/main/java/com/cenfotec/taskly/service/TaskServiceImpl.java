@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TaskImpl implements TaskService {
+public class TaskServiceImpl implements TaskService {
     @Autowired
     TaskRepository taskRepository;
 
@@ -20,5 +20,10 @@ public class TaskImpl implements TaskService {
     @Override
     public List<Task> findAllByUserId(String userId) {
         return taskRepository.findAllByUserId(userId);
+    }
+
+    @Override
+    public void deleteByUuid(String uuid) {
+        taskRepository.deleteTaskByUuid(uuid);
     }
 }

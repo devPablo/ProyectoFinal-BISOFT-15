@@ -2,16 +2,15 @@ package com.cenfotec.taskly.web;
 
 import com.cenfotec.taskly.domain.Task;
 import com.cenfotec.taskly.service.TaskService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,9 +32,14 @@ public class TaskController {
     }
 
     @RequestMapping(path="/api/task/{userId}", produces= MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Task>> getTasksByUser(@PathVariable("userId") String userId) {
+    public ResponseEntity<List<Task>> getTasksByUserID(@PathVariable("userId") String userId) {
         List<Task> taskList = taskService.findAllByUserId(userId);
         return new ResponseEntity<>(taskList, HttpStatus.OK);
     }
 
+    @DeleteMapping(path="/api/task/{uuid}")
+    public ResponseEntity<String> deleteTaskByUUID(@PathVariable("uuid") String uuid) {
+        taskService.deleteByUuid(uuid);
+        return new ResponseEntity<>(uuid, HttpStatus.OK);
+    }
 }

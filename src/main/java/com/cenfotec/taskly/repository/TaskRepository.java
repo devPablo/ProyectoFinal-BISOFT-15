@@ -8,4 +8,6 @@ import java.util.List;
 public interface TaskRepository extends CosmosRepository<Task, String> {
 
     List<Task> findAllByUserId(String userId);
+
+    void deleteTaskByUuid(String uuid);
 }

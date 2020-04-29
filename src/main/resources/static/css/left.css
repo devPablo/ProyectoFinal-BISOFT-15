@@ -14,7 +14,7 @@ nav {
 nav ul {
     display: table;
     width: 100%;
-    padding: 25px 30px;
+    padding: 25px 40px;
 }
 
 nav ul li {
@@ -66,8 +66,8 @@ nav ul li:last-child {
 }
 
 #middle_tasks img {
-    padding: 5%;
-    width: 100%;
+    padding-top: 5%;
+    width: 70%;
     height: auto;
 }
 
@@ -75,11 +75,5 @@ nav ul li:last-child {
     margin: 7.5%;
 }
 
-#middle_tasks-title {
-    font-weight: 500;
-    font-size: 25px;
-}
 
-#middle_tasks-subtitle {
-    color: #78787B;
-}
+

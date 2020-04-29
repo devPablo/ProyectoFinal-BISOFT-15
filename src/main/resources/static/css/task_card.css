@@ -1,0 +1,143 @@
+/* Add a Task */
+#taskly__task {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #FFF;
+    line-height: 60px;
+    text-align: center;
+    background-color: #1230E3;
+    cursor: pointer;
+    z-index: 99;
+    transition: .1s ease-in-out;
+}
+
+#taskly__task:hover {
+    background-color: rgb(55, 81, 230);
+}
+
+.task_card {
+    background-color: #FAFBFD;
+    padding: 2.5%;
+    margin: 5% 0;
+    border-radius: 5px;
+}
+
+/* Taskly Tasks */
+.task__delete {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FD397A;
+    line-height: 25px;
+    text-align: center;
+    background-color: #F1BACC;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+.task__delete:hover {
+    background-color: rgb(243, 200, 214);
+}
+
+.task__title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.task__description {
+    color: #2e2020;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task__dueDate {
+    color: #929292;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+/* Create Task Form */
+#taskly_new-task {
+    background-color: #FFF;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    border: 1px solid #BEBEBE;
+}
+
+#taskly_new-task h2 {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0;
+}
+
+#taskly_new-task p {
+    color: #929292;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -5px;
+    padding-bottom: 25px;
+}
+
+#taskly_new-task div {
+    margin: 35px;
+    position: relative;
+}
+
+#taskly_new-task span {
+    position: absolute;
+    top: -22.5px;
+}
+
+#taskly_new-task input, #taskly_new-task textarea {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: rgb(243, 243, 243);
+}
+
+#taskly_new-task textarea {
+    min-height: 50px;
+    max-height: 100px;
+}
+
+#taskly__form__submit {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFF;
+    background-color: #1230E3;
+    padding: 5px;
+    border-radius: 2px;
+    transition: .1s ease-in-out;
+}
+
+#taskly__form__submit:hover {
+    background-color: rgb(55, 81, 230);
+}

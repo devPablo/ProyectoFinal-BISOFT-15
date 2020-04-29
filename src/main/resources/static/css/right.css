@@ -4,3 +4,19 @@
     height: 100%;
     float: right;
 }
+
+#completed__tasks {
+    border: 1px solid #A0A0A0;
+    border-style: dashed;
+    border-radius: 25px;
+    width: 100%;
+    height: 550px;
+    margin-top: 25%;
+    display: table;
+    cursor: default;
+}
+
+.vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -22,6 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 //El metodo authorizeRequests() permite restringir y/o dar acceso request HTTP
                 .authorizeRequests()
                 //antMatchers(): Lista de URL que corresponden a un RequestMapping como lo hacemos en los controladores.

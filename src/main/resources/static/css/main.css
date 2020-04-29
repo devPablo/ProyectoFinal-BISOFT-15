@@ -4,9 +4,31 @@ body {
     background-color: #F5F9FC;
     font-family: 'Roboto', sans-serif;
     color: #171820;
+    overflow-x: hidden;
 }
 
 @font-face {
     font-family: Daniel;
     src: url(/font/daniel.ttf);
-  }
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-weight: 400;
+    color: #78787B;
+}
+
+.taskly_align-middle {
+    position: relative;
+}
+
+.taskly_align-middle div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

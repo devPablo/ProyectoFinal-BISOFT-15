@@ -25,6 +25,7 @@ public class TaskController {
         return "tasks";
     }
 
+    @CrossOrigin
     @PostMapping("/api/task")
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         Task newTask = new Task(task.getUserId(), task.getName(), task.getDescription(), task.getDueDate());
@@ -32,18 +33,21 @@ public class TaskController {
         return new ResponseEntity<>(newTask, HttpStatus.CREATED);
     }
 
+    @CrossOrigin
     @RequestMapping(path="/api/task/{userId}", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Task>> getTasksByUserID(@PathVariable("userId") String userId) {
         List<Task> taskList = taskService.findAllByUserId(userId);
         return new ResponseEntity<>(taskList, HttpStatus.OK);
     }
 
+    @CrossOrigin
     @PutMapping(path="/api/task/{uuid}")
     public ResponseEntity<Task> updateTaskByUUID(@PathVariable("uuid") String uuid, @RequestBody Task task) {
         Task updatedEspecie = taskService.updateByUuid(uuid, task);
         return new ResponseEntity<>(updatedEspecie, HttpStatus.OK);
     }
 
+    @CrossOrigin
     @DeleteMapping(path="/api/task/{uuid}")
     public ResponseEntity<String> deleteTaskByUUID(@PathVariable("uuid") String uuid) {
         taskService.deleteByUuid(uuid);

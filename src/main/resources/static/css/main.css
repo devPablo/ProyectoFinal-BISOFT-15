@@ -32,3 +32,14 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#taskly_loading {
+    text-align: center;
+    padding: 25%;
+}
+
+#taskly_loading div {
+    display: inline-block;
+    width: 90px;
+    height: auto;
+}

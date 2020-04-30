@@ -17,6 +17,16 @@ $(document).ready(() => {
 
 
 function fillTasks() {
+    const loading =
+        `
+        <div id="taskly_loading">
+            <div>
+                <img src="/img/loading.gif">
+            </div>
+        </div>
+        `
+    document.querySelector('#middle_tasks').innerHTML = loading;
+
     const userId = 1;
     return getMethodToAPI(endpoint + `/${userId}`).done(data => {
         const tasks_todo = [];
@@ -167,7 +177,6 @@ function fillTasks() {
         }
 
         if (tasks_done.length > 0 || tasks_todo.length > 0) {
-            console.log('test');
             // Add delete listener
             document.querySelectorAll('.task__delete').forEach(e => {
                 e.addEventListener('click', f => {

@@ -67,7 +67,7 @@ function fillTasks() {
 
                 task_card = `
                         <div>
-                        <div class="task_card drag-drop" uuid="${task__uuid}">
+                        <div class="task_card" uuid="${task__uuid}">
                             <div class="row">
                                 <div class="col-sm-1 taskly_align-middle">
                                     <div class="task__delete">X</div>

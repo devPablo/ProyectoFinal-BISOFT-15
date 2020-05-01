@@ -16,4 +16,9 @@ public class IndexController {
     public String tasks(Model model) {
         return "tasks";
     }
+
+    @GetMapping({"/signin"})
+    public String signin(Model model) {
+        return "signin";
+    }
 }

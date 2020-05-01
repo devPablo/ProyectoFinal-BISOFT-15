@@ -16,6 +16,7 @@ document.querySelector('#redirectlogin').addEventListener("click",
             data.apellidos = lastname;
             data.username = email;
             data.password = password;
+            data.enabled = true;
             postMethodToAPI(endpoint, data).done(f => {
                 window.location.href = "http://localhost:8082";
             });

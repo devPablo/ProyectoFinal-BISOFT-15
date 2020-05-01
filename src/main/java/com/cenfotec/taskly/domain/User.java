@@ -4,6 +4,8 @@ import com.microsoft.azure.spring.data.cosmosdb.core.mapping.Document;
 import com.microsoft.azure.spring.data.cosmosdb.core.mapping.PartitionKey;
 import org.springframework.data.annotation.Id;
 
+import java.util.List;
+
 @Document(collection = "Users")
 public class User {
     @Id
@@ -12,12 +14,15 @@ public class User {
     private String password;
     private String nombre;
     private String apellidos;
+    private boolean enabled;
 
-    public User(String username, String password, String nombre, String apellidos) {
+
+    public User(String username, String password, String nombre, String apellidos, boolean enabled) {
         this.setUsername(username);
         this.setPassword(password);
         this.setNombre(nombre);
         this.setApellidos(apellidos);
+        this.enabled = enabled;
     }
 
     public String getUsername() {

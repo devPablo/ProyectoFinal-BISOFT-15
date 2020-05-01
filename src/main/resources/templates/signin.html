@@ -4,16 +4,33 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Sign in</title>
+        <title>Registro de usuario</title>
+
+        <!--JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- Los iconos tipo Solid de Fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+        <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
 
     <body>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form action="#" th:action="@{/processForm}" th:object="${user}" method="post">
-            <input type="text" th:field="*{username}" />
-            <input type="text" th:field="*{password}" />
-            <input type="submit" />
+        <form action="#" method="post">
+            <input type="text" id="name">
+            <input type="text" id="lastname">
+            <input type="email" id="email">
+            <input type="password" id="password">
+            <button type="button" id="redirectlogin" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Registrarme </button>
         </form>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+                integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+        <script src="/js/service.js"></script>
+        <script src="/js/signin.js"></script>
     </body>
 
 </html>

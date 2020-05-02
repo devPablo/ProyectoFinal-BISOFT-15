@@ -27,7 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .authorizeRequests()
                 //antMatchers(): Lista de URL que corresponden a un RequestMapping como lo hacemos en los controladores.
                 .antMatchers(resources).permitAll() // permitAll(): Especifica que estas URLs son accesibles por cualquiera.
-                .antMatchers("/signin").permitAll()
+                .antMatchers("/signin", "/api*").permitAll()
                 //access(): permite el acceso cumpliendo la expresión, en este caso tenemos la expresion “hasRole()”.
                 // Donde verifica si el usuario tiene ese especifico Role.
                 .antMatchers("/tasks*").access("hasRole('USER')")

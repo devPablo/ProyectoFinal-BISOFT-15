@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    
-        <title>Sign Up</title>
 
-        <link rel="stylesheet" href="../static/css/index.css">
-    </head>
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
 
-    <body>
-        <h1>Taskly Login</h1>
-        <form class="col-12" th:action="@{/login}" method="post">
-            <div class="form-group" id="user-group">
-                <input type="text" class ="form-control" placeholder="Nombre de usuario" name="username"/>
-            </div>
+    <title>Sign Up</title>
 
-            <div class="form-group" id="contrasena-group">
-                <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
-            </div>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
 
-            <button type="submit" id="index_button">Ingresar</button>
-         </form>
+<body>
+    <h1>Taskly Login</h1>
+    <form class="col-12" th:action="@{/login}" method="post">
+        <div class="form-group" id="user-group">
+            <input type="text" class="form-control" placeholder="Nombre de usuario" name="username" />
+        </div>
 
-        <form class="col-12" th:action="@{/signin}" method="get">
-            <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Registro de usuarios </button>
-        </form>
+        <div class="form-group" id="contrasena-group">
+            <input type="password" class="form-control" placeholder="Contrasena" name="password" />
+        </div>
 
-        <div class="col-12 forgot"> <a href="#">Recordar contrasena?</a> </div>
+        <button type="submit" id="index_button">Ingresar</button>
+    </form>
 
-        <div th:if="${param.error}" class="alert alert-danger" role="alert">Invalid username and password.</div>
-        <div th:if="${param.logout}" class="alert alert-success" role="alert">You have been logged out.</div>
-    </body>
-    <script src="/js/service.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-        
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <form class="col-12" th:action="@{/signin}" method="get">
+        <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Registro de usuarios </button>
+    </form>
+
+    <div class="col-12 forgot"> <a href="#">Recordar contrasena?</a> </div>
+
+    <div th:if="${param.error}" class="alert alert-danger" role="alert">Invalid username and password.</div>
+    <div th:if="${param.logout}" class="alert alert-success" role="alert">You have been logged out.</div>
+</body>
+<!--JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<script src="/js/service.js"></script>
+<script src="/js/index.js"></script>
+
+
 </html>

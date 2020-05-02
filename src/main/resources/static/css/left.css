@@ -27,8 +27,29 @@ nav ul li:first-child {
     padding-bottom: 10px;
 }
 
-nav ul li:last-child {
+nav ul li #nav__username {
     float: right;
+}
+
+nav ul li #nav__logout-form {
+    float: right;
+    margin: 10px 25px;
+}
+
+nav ul li #nav__logout-form input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid #1230E3;
+    padding: 5px 15px;
+    border-radius: 25px;
+    color: #1230E3;
+    transition: .2s ease-in-out;
+}
+
+nav ul li #nav__logout-form input:hover {
+    background-color: #1230E3;
+    color: #FFF;
 }
 
 #nav_logo {

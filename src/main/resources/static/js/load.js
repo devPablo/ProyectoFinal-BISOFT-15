@@ -5,6 +5,8 @@ const endpoint = `https://bisoft15.azurewebsites.net/api/task`;
 let FLAG_NEW_TASK_FORM = false;
 
 $(document).ready(() => {
+    const taskly__username = document.querySelector('#taskly__username').innerText;
+    document.querySelector('#nav__username').innerText = taskly__username.substring(0, 2).toUpperCase();
     // Load current date
     // Format: Sunday, April 26th, 2020
     let todayDate = formatDate(new Date());
@@ -27,8 +29,8 @@ function fillTasks() {
         `
     document.querySelector('#middle_tasks').innerHTML = loading;
 
-    const userId = 1;
-    return getMethodToAPI(endpoint + `/${userId}`).done(data => {
+    const taskly__username = document.querySelector('#taskly__username').innerText;
+    return getMethodToAPI(endpoint + `/${taskly__username}`).done(data => {
         const tasks_todo = [];
         const tasks_done = [];
 
@@ -232,10 +234,10 @@ document.querySelector('#taskly__form__submit').addEventListener('click', e => {
 
     document.querySelector('#taskly_new-task').classList.add('d-none');
     FLAG_NEW_TASK_FORM = false;
-
+    const taskly__username = document.querySelector('#taskly__username').innerText;
     const NEW_TASK =
     {
-        "userId": "1",
+        "userId": taskly__username,
         "name": name,
         "description": description,
         "dueDate": dueDate

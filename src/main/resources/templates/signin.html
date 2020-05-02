@@ -7,22 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Taskly | Register</title>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/register.css">
 </head>
 
 <body>
-    <form>
+    <!-- <form>
         <input type="text" id="name">
         <input type="text" id="lastname">
         <input type="email" id="email">
         <input type="password" id="password">
         <button type="button" id="redirectlogin" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Register
         </button>
-    </form>
+    </form> -->
+
+    <div id="register-container">
+        <form id="register-form">
+            <div id="taskly__back"><i class="fas fa-arrow-left"></i></div>
+            
+            <div>
+                <h1 id="logo">Taskly</h1>
+                <span id="taskly-register">Register</span>
+            </div>
+            <div id="taskly-form-fields">
+                <div class="taskly-field">
+                    <span>Name</span>
+                    <input type="text" id="name">
+                </div>
+                <div class="taskly-field">
+                    <span>Lastname</span>
+                    <input type="text" id="lastname">
+                </div>
+                <div class="taskly-field">
+                    <span>Email</span>
+                    <input type="email" id="email">
+                </div>
+                <div class="taskly-field">
+                    <span>Password</span>
+                    <input type="password" id="password">
+                </div>
+                <div class="taskly-field">
+                    <button type="button" id="taskly__register">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
     <script src="/js/service.js"></script>

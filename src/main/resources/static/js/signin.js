@@ -4,7 +4,11 @@ function validation(name, lastname, email, password){
     return !(name == '' || lastname == '' || email == '' || password == '');
 }
 
-document.querySelector('#redirectlogin').addEventListener("click",
+document.querySelector('#taskly__back').addEventListener('click', () => {
+    window.location.href = "https://bisoft15.azurewebsites.net";
+});
+
+document.querySelector('#taskly__register').addEventListener("click",
     function redireccionLogin() {
         let name = document.querySelector('#name').value;
         let lastname = document.querySelector('#lastname').value;

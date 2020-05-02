@@ -1,4 +1,4 @@
 document.querySelector("#redirectsignin").addEventListener("click",
     function redireccionSignin() {
-        window.location.href = "http://localhost:8082/signin";
+        window.location.href = "https://bisoft15.azurewebsites.net/signin";
     });

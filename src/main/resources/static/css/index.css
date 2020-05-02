@@ -1,12 +1,64 @@
-.index_button {
-    width: 30%;
-    border: none;
+.index_button_1, .index_button_2 {
     outline: none;
+    background-color: transparent;
+    border: 2px solid #1230E3;
+    padding: 5px 15px;
+    border-radius: 25px;
+    color: #1230E3;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    width: 500px;
+    margin-left: 200px;
+}
+
+.index_button_2 {
+    margin-top: 10px;
+}
+
+.index_button_1:hover, .index_button_2:hover{
+    background-color: #1230E3;
+    color: #FFF;
+}
+
+.titulo{
+    text-align: center;
+    font-family: Daniel;
+    color: #0D2CE2;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+._alertas{
+    width: 30%; 
     font-size: 20px;
     font-weight: 400;
-    color: #FFF;
-    background-color: #1230E3;
+    padding: 5px;
+    margin: auto;
+}
+
+._inputs{
+    width: 500px; 
+    font-size: 20px;
+    font-weight: 400;
     padding: 5px;
     border-radius: 2px;
-    transition: .1s ease-in-out;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.grant{
+    margin-top: 10px;
+    width: 900px;
+    height: 290px;
+    position:absolute;
+    left:50%;
+    margin-left:-450px;
+    background-color: #FFF;
+    -webkit-box-shadow: 8px 13px 10px -2px rgba(156,156,156,0.66);
+    -moz-box-shadow: 8px 13px 10px -2px rgba(156,156,156,0.66);
+    box-shadow: 8px 13px 10px -2px rgba(156,156,156,0.66);
+}
+
+._registro{
+    margin: auto;
 }

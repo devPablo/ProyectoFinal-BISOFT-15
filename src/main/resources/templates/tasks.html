@@ -15,10 +15,7 @@
 </head>
 
 <body>
-<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Cerrar Sesion"/>
-</form>
+    <span id="taskly__username" class="d-none" th:inline="text">[[${#httpServletRequest.remoteUser}]]</span>
     <!-- Add a Task -->
     <div id="taskly__task">+</div>
 
@@ -51,7 +48,10 @@
             <ul>
                 <li id="nav_logo">Taskly</li>
                 <li>
-                    <div id="nav__username">PB</div>
+                    <div id="nav__username"></div>
+                    <form id="nav__logout-form" th:action="@{/logout}" method="post">
+                        <input type="submit" value="Log out"/>
+                    </form>
                 </li>
             </ul>
         </nav>

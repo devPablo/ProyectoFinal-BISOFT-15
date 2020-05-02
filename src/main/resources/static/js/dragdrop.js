@@ -66,8 +66,8 @@ interact('.dropzone').dropzone({
         let min_one_completed = false;
 
 
-        const userId = 1;
-        getMethodToAPI(endpoint + `/${userId}`).done(data => {
+        const taskly__username = document.querySelector('#taskly__username').innerText;
+        getMethodToAPI(endpoint + `/${taskly__username}`).done(data => {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].complete) {
                     min_one_completed = true;
